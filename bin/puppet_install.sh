@@ -95,9 +95,9 @@ setup_apt() {
     *) echo "Release not supported" ;;
   esac
 
-  echo_title "Adding repo for Puppet"
-  $sudo_command wget -q "http://apt.puppetlabs.com/puppet-release-${codename}.deb" >/dev/null
-  $sudo_command dpkg -i "puppet-release-${codename}.deb" >/dev/null
+  echo_title "Adding repo for Puppet 5"
+  $sudo_command wget -q "http://apt.puppetlabs.com/puppet5-release-${codename}.deb" >/dev/null
+  $sudo_command dpkg -i "puppet5-release-${codename}.deb" >/dev/null
 
   echo_title "Running apt-get update"
   $sudo_command apt-get update >/dev/null 2>&1
